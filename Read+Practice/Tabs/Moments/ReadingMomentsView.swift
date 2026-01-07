@@ -50,7 +50,12 @@ struct ReadingMomentsView: View {
    private var pathItems: some View {
        
        ForEach(readingMoments) { readingMoment in
-           Text(readingMoment.title)
+           
+           NavigationLink {
+               ReadingMomentDetailView(readingMoment: readingMoment)
+           } label: {
+               Text(readingMoment.title)
+           }
            
        }
     }
