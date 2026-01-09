@@ -55,8 +55,10 @@ struct MomentEntryView: View {
                             timeStamp: .now
                         )
                         dataContainer.context.insert(newReadingMoment)
+                        dismiss()
                         do {
                             try dataContainer.context.save()
+                            
                         } catch {
                             fatalError()
                         }

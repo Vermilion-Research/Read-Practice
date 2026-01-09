@@ -12,6 +12,7 @@ struct ReadingMomentsView: View {
     @State private var showCreateReadingMoment: Bool = false
     @Query(sort: \ReadingMoment.timeStamp)
     private var readingMoments: [ReadingMoment]
+    static let offSetAmount: CGFloat = 70.0
     
     var body: some View {
         
@@ -42,6 +43,9 @@ struct ReadingMomentsView: View {
                     }
                 }
             }
+            .defaultScrollAnchor(.bottom, for: .initialOffset)
+            .defaultScrollAnchor(.bottom, for: .sizeChanges)
+            .defaultScrollAnchor(.top, for: .alignment)
             .navigationTitle("Reading Moments")
         }
         
@@ -49,12 +53,27 @@ struct ReadingMomentsView: View {
     
    private var pathItems: some View {
        
-       ForEach(readingMoments) { readingMoment in
+       ForEach(readingMoments.enumerated(), id: \.0) { index, readingMoment in
            
            NavigationLink {
                ReadingMomentDetailView(readingMoment: readingMoment)
            } label: {
-               Text(readingMoment.title)
+               if readingMoment == readingMoments.last {
+                   ReadingMomentSealView(
+                    readingMoment: readingMoment,
+                    layout: .large
+                   )
+               } else {
+                   ReadingMomentSealView(readingMoment: readingMoment)
+                       .offset(x: sin(Double(index) * .pi / 2) * Self.offSetAmount)
+               }
+           }
+           .scrollTransition { content, phase in
+               content
+                   .opacity(phase.isIdentity ? 1 : 0)
+                   .scaleEffect(phase.isIdentity ? 1 : 0.8)
+               
+               
            }
            
        }
@@ -69,4 +88,5 @@ struct ReadingMomentsView: View {
 #Preview("view when there is no data") {
     ReadingMomentsView()
         .modelContainer(for: [ReadingMoment.self])
+        .environment(DataContainer())
 }

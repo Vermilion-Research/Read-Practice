@@ -6,6 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4A705F362F102DF5005F1C5C /* Five stars unlocked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F2E2F102DF5005F1C5C /* Five stars unlocked.pdf */; };
+		4A705F372F102DF5005F1C5C /* Perfect ten unlocked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F302F102DF5005F1C5C /* Perfect ten unlocked.pdf */; };
+		4A705F382F102DF5005F1C5C /* Five stars locked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F2D2F102DF5005F1C5C /* Five stars locked.pdf */; };
+		4A705F392F102DF5005F1C5C /* First entry unlocked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F2C2F102DF5005F1C5C /* First entry unlocked.pdf */; };
+		4A705F3A2F102DF5005F1C5C /* Expressive unlocked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F2A2F102DF5005F1C5C /* Expressive unlocked.pdf */; };
+		4A705F3B2F102DF5005F1C5C /* Expressive locked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F292F102DF5005F1C5C /* Expressive locked.pdf */; };
+		4A705F3C2F102DF5005F1C5C /* Shutterbug unlocked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F322F102DF5005F1C5C /* Shutterbug unlocked.pdf */; };
+		4A705F3D2F102DF5005F1C5C /* First entry locked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F2B2F102DF5005F1C5C /* First entry locked.pdf */; };
+		4A705F3E2F102DF5005F1C5C /* MomentsTab.svg in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F342F102DF5005F1C5C /* MomentsTab.svg */; };
+		4A705F3F2F102DF5005F1C5C /* Blank.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F282F102DF5005F1C5C /* Blank.pdf */; };
+		4A705F402F102DF5005F1C5C /* Perfect ten locked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F2F2F102DF5005F1C5C /* Perfect ten locked.pdf */; };
+		4A705F412F102DF5005F1C5C /* Shutterbug locked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F312F102DF5005F1C5C /* Shutterbug locked.pdf */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4A52ED592F0D73EC0078D36B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +42,18 @@
 		4A52ED492F0D73EA0078D36B /* Read+Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Read+Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A52ED582F0D73EC0078D36B /* Read+PracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Read+PracticeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A52ED622F0D73EC0078D36B /* Read+PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Read+PracticeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A705F282F102DF5005F1C5C /* Blank.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Blank.pdf; sourceTree = "<group>"; };
+		4A705F292F102DF5005F1C5C /* Expressive locked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Expressive locked.pdf"; sourceTree = "<group>"; };
+		4A705F2A2F102DF5005F1C5C /* Expressive unlocked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Expressive unlocked.pdf"; sourceTree = "<group>"; };
+		4A705F2B2F102DF5005F1C5C /* First entry locked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "First entry locked.pdf"; sourceTree = "<group>"; };
+		4A705F2C2F102DF5005F1C5C /* First entry unlocked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "First entry unlocked.pdf"; sourceTree = "<group>"; };
+		4A705F2D2F102DF5005F1C5C /* Five stars locked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Five stars locked.pdf"; sourceTree = "<group>"; };
+		4A705F2E2F102DF5005F1C5C /* Five stars unlocked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Five stars unlocked.pdf"; sourceTree = "<group>"; };
+		4A705F2F2F102DF5005F1C5C /* Perfect ten locked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Perfect ten locked.pdf"; sourceTree = "<group>"; };
+		4A705F302F102DF5005F1C5C /* Perfect ten unlocked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Perfect ten unlocked.pdf"; sourceTree = "<group>"; };
+		4A705F312F102DF5005F1C5C /* Shutterbug locked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Shutterbug locked.pdf"; sourceTree = "<group>"; };
+		4A705F322F102DF5005F1C5C /* Shutterbug unlocked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Shutterbug unlocked.pdf"; sourceTree = "<group>"; };
+		4A705F342F102DF5005F1C5C /* MomentsTab.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = MomentsTab.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -79,6 +106,7 @@
 				4A52ED5B2F0D73EC0078D36B /* Read+PracticeTests */,
 				4A52ED652F0D73EC0078D36B /* Read+PracticeUITests */,
 				4A52ED4A2F0D73EA0078D36B /* Products */,
+				4A705F352F102DF5005F1C5C /* Assets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +118,33 @@
 				4A52ED622F0D73EC0078D36B /* Read+PracticeUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4A705F332F102DF5005F1C5C /* Badges */ = {
+			isa = PBXGroup;
+			children = (
+				4A705F282F102DF5005F1C5C /* Blank.pdf */,
+				4A705F292F102DF5005F1C5C /* Expressive locked.pdf */,
+				4A705F2A2F102DF5005F1C5C /* Expressive unlocked.pdf */,
+				4A705F2B2F102DF5005F1C5C /* First entry locked.pdf */,
+				4A705F2C2F102DF5005F1C5C /* First entry unlocked.pdf */,
+				4A705F2D2F102DF5005F1C5C /* Five stars locked.pdf */,
+				4A705F2E2F102DF5005F1C5C /* Five stars unlocked.pdf */,
+				4A705F2F2F102DF5005F1C5C /* Perfect ten locked.pdf */,
+				4A705F302F102DF5005F1C5C /* Perfect ten unlocked.pdf */,
+				4A705F312F102DF5005F1C5C /* Shutterbug locked.pdf */,
+				4A705F322F102DF5005F1C5C /* Shutterbug unlocked.pdf */,
+			);
+			path = Badges;
+			sourceTree = "<group>";
+		};
+		4A705F352F102DF5005F1C5C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4A705F332F102DF5005F1C5C /* Badges */,
+				4A705F342F102DF5005F1C5C /* MomentsTab.svg */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +267,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A705F362F102DF5005F1C5C /* Five stars unlocked.pdf in Resources */,
+				4A705F372F102DF5005F1C5C /* Perfect ten unlocked.pdf in Resources */,
+				4A705F382F102DF5005F1C5C /* Five stars locked.pdf in Resources */,
+				4A705F392F102DF5005F1C5C /* First entry unlocked.pdf in Resources */,
+				4A705F3A2F102DF5005F1C5C /* Expressive unlocked.pdf in Resources */,
+				4A705F3B2F102DF5005F1C5C /* Expressive locked.pdf in Resources */,
+				4A705F3C2F102DF5005F1C5C /* Shutterbug unlocked.pdf in Resources */,
+				4A705F3D2F102DF5005F1C5C /* First entry locked.pdf in Resources */,
+				4A705F3E2F102DF5005F1C5C /* MomentsTab.svg in Resources */,
+				4A705F3F2F102DF5005F1C5C /* Blank.pdf in Resources */,
+				4A705F402F102DF5005F1C5C /* Perfect ten locked.pdf in Resources */,
+				4A705F412F102DF5005F1C5C /* Shutterbug locked.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
