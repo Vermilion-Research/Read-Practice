@@ -21,6 +21,10 @@ struct ReadingBadgeDetailView: View {
             Text(readingBadge.readingBadgeDetails.congratulatoryMessage)
                 .font(.body)
             Spacer()
+            if let timeStamp = readingBadge.timeStamp {
+                Text(timeStamp, style: .date)
+                    .font(.caption2.bold())
+            }
                
         }
         .padding()

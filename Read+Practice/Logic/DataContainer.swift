@@ -41,7 +41,7 @@ class DataContainer {
             try readingBadgeManager.loadReadingBadgesIfNeeded()
             
             if includeSampleMoments {
-                loadSampleMoments()
+               try loadSampleMoments()
             }
             try context.save()
             
@@ -52,10 +52,12 @@ class DataContainer {
     
     }
     
-    private func loadSampleMoments() {
+    private func loadSampleMoments() throws {
         
         for readingMoment in ReadingMoment.sampleData {
             context.insert(readingMoment)
+            try readingBadgeManager
+                .unlockBadges(newReadingMoment: readingMoment)
         }
     }
 }
