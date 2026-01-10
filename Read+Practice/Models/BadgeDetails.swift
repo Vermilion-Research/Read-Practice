@@ -97,13 +97,13 @@ enum BadgeDetails: Int, Codable, CaseIterable {
     var color: Color {
         switch self {
         case .firstEntry:
-            return .coral
+            return .ember
         case .fiveStars:
             return .brick
         case .shutterBug:
-            return .oceania
-        case .expressive:
             return .deepBlue
+        case .expressive:
+            return .oceania
         case .perfectTen:
             return .ember
         }
