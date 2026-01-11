@@ -39,7 +39,14 @@ struct Seal<Content: View>: View {
                 .foregroundStyle(borderColor)
         }
         .frame(width: layout.size, height: layout.size)
-        
+        .overlay(alignment: .topTrailing){
+            if let readingMoment {
+                SealAccessoryView(
+                    readingMoment: readingMoment,
+                    sealLayout: layout
+                )
+            }
+        }
     }
 }
 

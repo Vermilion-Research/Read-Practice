@@ -16,6 +16,8 @@ class ReadingMoment {
     var imageData: Data?
     var timeStamp: Date
     
+    var readingBadges: [ReadingBadge]
+    
     
     init(
         title: String,
@@ -27,6 +29,7 @@ class ReadingMoment {
         self.note = note
         self.imageData = imageData
         self.timeStamp = timeStamp
+        self.readingBadges = []
         
     }
     

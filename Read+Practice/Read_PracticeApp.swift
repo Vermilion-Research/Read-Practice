@@ -14,10 +14,11 @@ struct Read_PracticeApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-                
-            MomentEntryView()
+            ContentView()
                 .environment(dataContainer)
+                
+//            MomentEntryView()
+//                .environment(dataContainer)
         }
         .modelContainer(dataContainer.modelContainer)
     }

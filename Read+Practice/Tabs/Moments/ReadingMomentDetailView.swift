@@ -43,8 +43,20 @@ struct ReadingMomentDetailView: View {
     
     private var contentStack: some View {
         VStack(alignment: .leading) {
-            Text(readingMoment.timeStamp, style: .date)
-                .font(.subheadline)
+            HStack {
+                Text(readingMoment.timeStamp, style: .date)
+                    .font(.subheadline)
+                Spacer()
+                ForEach(readingMoment.readingBadges) { readingBadge in
+                    NavigationLink {
+                        ReadingBadgeDetailView(readingBadge: readingBadge)
+                    } label: {
+                        Image(readingBadge.readingBadgeDetails.image)
+                            .resizable()
+                            .frame(width: 44, height: 44)
+                    }
+                }
+            }
             if !readingMoment.note.isEmpty {
                 Text(readingMoment.note)
                     .textSelection(.enabled)

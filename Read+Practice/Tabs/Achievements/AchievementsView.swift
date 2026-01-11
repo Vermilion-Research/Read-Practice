@@ -25,16 +25,27 @@ struct AchievementsView: View {
     }
     
     private var contentStack: some View {
-        VStack{
-            header("Unlocked Badges")
-            ForEach(sortedUnlockedReadingBadges) { readingBadge in
-                Text(readingBadge.readingBadgeDetails.title)
+        VStack(alignment: .leading){
+            
+            if !unlockedReadingBadges.isEmpty {
+                header("Unlocked Badges")
+                ScrollView(.horizontal) {
+                    HStack {
+                        ForEach(sortedUnlockedReadingBadges) { readingBadge in
+                            UnlockedBadgeView(readingBadge: readingBadge)
+                        }
+                    }
+                }
+                .scrollClipDisabled()
+                .scrollIndicators(.hidden)
             }
-            header("Locked Badges" )
-            ForEach(sortedLockedReadingBadges) { readingBadge in
-                Text(readingBadge.readingBadgeDetails.title)
+            if !lockedReadingBadges.isEmpty {
+                header("Locked Badges" )
+                ForEach(sortedLockedReadingBadges) { readingBadge in
+                    LockedBadgeView(readingBadge: readingBadge)
+                }
             }
-        }
+            }
         .padding()
         .frame(maxWidth: .infinity)
         
