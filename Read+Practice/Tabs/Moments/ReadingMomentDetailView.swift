@@ -79,3 +79,11 @@ struct ReadingMomentDetailView: View {
             .sampleDataContainer()
     }
 }
+
+#Preview("long text version") {
+    NavigationStack {
+        ReadingMomentDetailView(readingMoment: ReadingMoment.longTextSample)
+            .sampleDataContainer()
+
+    }
+}

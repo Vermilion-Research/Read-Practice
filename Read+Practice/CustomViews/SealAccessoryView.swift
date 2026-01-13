@@ -28,6 +28,7 @@ struct SealAccessoryView: View {
             if readingBadges.count > 1 {
                 Text("+ \(readingBadges.count)")
                     .bold()
+                    .minimumScaleFactor(0.3)
                     .frame(width: size * 0.5, height: size * 0.5)
                     .padding(8)
                     .background {
@@ -70,6 +71,7 @@ struct SealAccessoryView: View {
 
 
 #Preview("Multiple badges") {
-    ReadingMomentSealView(readingMoment: .sample, layout: .large)
+    ReadingMomentSealView(readingMoment: .imageSample, layout: .standard)
+        .dynamicTypeSize(.large)
         .sampleDataContainer()
 }

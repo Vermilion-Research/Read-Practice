@@ -10,6 +10,7 @@ import SwiftUI
 struct ReadingMomentSealView: View {
     var readingMoment: ReadingMoment
     @State var layout: SealLayout = .standard
+    @Environment(\.locale) private var locale
     
     var body: some View {
         
@@ -53,7 +54,11 @@ struct ReadingMomentSealView: View {
             }
             Text(
                 readingMoment.timeStamp
-                    .formatted(.dateTime.month(.abbreviated).day()))
+                    .formatted(
+                        .dateTime.locale(locale)
+                        .month(.abbreviated).day()
+                    )
+            )
             .font(.footnote)
             .padding(.bottom, layout.size * 0.80)
             .frame(maxWidth: layout.size / 3)
@@ -78,4 +83,9 @@ struct ReadingMomentSealView: View {
         )
         
     }
+}
+
+#Preview("english language, region great britain") {
+    ReadingMomentSealView(readingMoment: ReadingMoment.imageSample)
+        .environment(\.locale, Locale(identifier: "en_GB"))
 }

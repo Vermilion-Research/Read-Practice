@@ -31,3 +31,9 @@ struct ContentView: View {
         .sampleDataContainer()
         
 }
+
+#Preview("Dark Mode") {
+    ContentView()
+        .sampleDataContainer()
+        .preferredColorScheme(.dark)
+}

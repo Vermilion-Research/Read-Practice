@@ -11,31 +11,42 @@ struct ReadingBadgeDetailView: View {
     var readingBadge: ReadingBadge
     
     var body: some View {
-        VStack(spacing: 8) {
-            Image(readingBadge.readingBadgeDetails.image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 140, height: 140)
-            Text(readingBadge.readingBadgeDetails.title)
-                .font(.title.bold())
-            Text(readingBadge.readingBadgeDetails.congratulatoryMessage)
-                .font(.body)
-            Spacer()
-            if let timeStamp = readingBadge.timeStamp {
-                Text(timeStamp, style: .date)
-                    .font(.caption2.bold())
+        ScrollView {
+            VStack(spacing: 8) {
+                Image(readingBadge.readingBadgeDetails.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 140, height: 140)
+                Text(readingBadge.readingBadgeDetails.title)
+                    .font(.title.bold())
+                Text(readingBadge.readingBadgeDetails.congratulatoryMessage)
+                    .font(.body)
+                Spacer()
+                if let timeStamp = readingBadge.timeStamp {
+                    Text(timeStamp, style: .date)
+                        .font(.caption2.bold())
+                }
+                
             }
-               
+            .padding()
+            .frame(width: 320)
+            .frame(minWidth: 410)
+            .fixedSize()
+            .multilineTextAlignment(.center)
+            .foregroundStyle(.white)
+            .background(readingBadge.readingBadgeDetails.color.opacity(0.9))
+            .clipShape(RoundedRectangle(cornerRadius: 16.0))
         }
-        .padding()
-        .frame(width: 320, height: 410)
-        .multilineTextAlignment(.center)
-        .foregroundStyle(.white)
-        .background(readingBadge.readingBadgeDetails.color.opacity(0.9))
-        .clipShape(RoundedRectangle(cornerRadius: 16.0))
+        .scrollBounceBehavior(.basedOnSize)
+        .defaultScrollAnchor(.center, for: .alignment)
     }
 }
 
 #Preview {
     ReadingBadgeDetailView(readingBadge: .sample)
+}
+
+#Preview("Spanish language") {
+    ReadingBadgeDetailView(readingBadge: .sample)
+        .environment(\.locale, Locale(identifier: "es"))
 }

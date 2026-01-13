@@ -18,8 +18,14 @@ struct ReadingMomentsView: View {
         
         NavigationStack {
             ScrollView {
-                pathItems
-                    .frame(maxWidth: .infinity)
+                LazyVStack(spacing: 8, pinnedViews: .sectionHeaders) {
+                    Section {
+                        pathItems
+                            .frame(maxWidth: .infinity)
+                    } header: {
+                        streakHeader
+                    }
+                }
             }
             .overlay {
                 if readingMoments.isEmpty {
@@ -48,6 +54,7 @@ struct ReadingMomentsView: View {
             .defaultScrollAnchor(.top, for: .alignment)
             .navigationTitle("Reading Moments")
         }
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
         
     }
     
@@ -77,6 +84,20 @@ struct ReadingMomentsView: View {
            }
            
        }
+    }
+    
+    @ViewBuilder private var streakHeader: some View {
+        let streak = StreakCalculator().calculateStreak(for: readingMoments)
+        if streak > 0 {
+            HStack {
+                Text(verbatim: "\(streak)")
+                Text(Image(systemName: "flame.fill"))
+                    .foregroundStyle(.ember)
+                Spacer()
+            }
+            .font(.subheadline)
+            .padding()
+        }
     }
 }
 

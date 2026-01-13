@@ -14,6 +14,8 @@ struct AchievementsView: View {
     
     @Query(filter: #Predicate<ReadingBadge> {$0.timeStamp == nil})
     private var lockedReadingBadges: [ReadingBadge]
+    @Query(sort: \ReadingMoment.timeStamp)
+    private var readingMoments: [ReadingMoment]
     
     var body: some View {
         NavigationStack {
@@ -22,11 +24,16 @@ struct AchievementsView: View {
             }
             .navigationTitle("Achievements")
         }
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
     }
     
     private var contentStack: some View {
         VStack(alignment: .leading){
-            
+            StreakView(
+                numberOfDays: StreakCalculator()
+                    .calculateStreak(for: readingMoments)
+            )
+            .frame(maxWidth: .infinity)
             if !unlockedReadingBadges.isEmpty {
                 header("Unlocked Badges")
                 ScrollView(.horizontal) {
