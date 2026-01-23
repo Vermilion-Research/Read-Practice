@@ -24,6 +24,8 @@ struct MomentEntryView: View {
         NavigationStack {
             ScrollView {
                 contentStack
+                orDividerWord
+                cameraButton
             }
             .scrollDismissesKeyboard(.interactively)
             .navigationTitle("Reading Moment")
@@ -99,6 +101,23 @@ struct MomentEntryView: View {
         }
     }
     
+    private var cameraButton: some View {
+        Button() {
+            /*
+        something like
+             model.camera.takePhoto()
+             // use capturing photos package for functionality?
+             
+             */
+        } label: {
+            Image(systemName: "camera.fill")
+                .frame(width: 300, height: 65)
+        }
+        .buttonStyle(.glassProminent)
+        .controlSize(.regular)
+       
+    }
+    
     var contentStack: some View {
         VStack(alignment: .leading) {
             TextField(text: $title){
@@ -115,12 +134,14 @@ struct MomentEntryView: View {
             photoPicker
         }
         .padding()
-        
-        
     }
     
-    
-    
+    private var orDividerWord: some View {
+        Text("OR")
+            .font(.callout)
+            .fontWeight(.bold)
+            .foregroundStyle(.secondary)
+    }
 }
 
 #Preview {
