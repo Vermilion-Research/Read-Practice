@@ -8,6 +8,7 @@
 import SwiftUI
 import PhotosUI
 import SwiftData
+import UIKit
 
 struct MomentEntryView: View {
     @State private var title = ""
@@ -15,6 +16,7 @@ struct MomentEntryView: View {
     @State private var imageData: Data?
     @State private var newImage: PhotosPickerItem?
     @State private var isShowingCancelConfirmation = false
+//    @State private var cameraImage: UIImage?
     
     @Environment(DataContainer.self) private var dataContainer
     @Environment(\.dismiss) private var dismiss
@@ -110,7 +112,9 @@ struct MomentEntryView: View {
              
              */
         } label: {
-            Image(systemName: "camera.fill")
+            Image(systemName: "camera.aperture")
+                .resizable()
+                .scaledToFit()
                 .frame(width: 300, height: 65)
         }
         .buttonStyle(.glassProminent)

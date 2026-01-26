@@ -15,6 +15,7 @@ class ReadingMoment {
     var note: String
     var imageData: Data?
     var timeStamp: Date
+//    var cameraImage: UIImage?
     
     var readingBadges: [ReadingBadge]
     
