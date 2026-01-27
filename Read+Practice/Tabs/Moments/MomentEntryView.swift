@@ -8,6 +8,7 @@
 import SwiftUI
 import PhotosUI
 import SwiftData
+import UIKit
 
 struct MomentEntryView: View {
     @State private var title = ""
@@ -15,6 +16,9 @@ struct MomentEntryView: View {
     @State private var imageData: Data?
     @State private var newImage: PhotosPickerItem?
     @State private var isShowingCancelConfirmation = false
+    @State private var showCamera: Bool = false
+    @State private var cameraError: CameraPermission.CameraError?
+    @State private var cameraImage: UIImage?
     
     @Environment(DataContainer.self) private var dataContainer
     @Environment(\.dismiss) private var dismiss
@@ -24,6 +28,8 @@ struct MomentEntryView: View {
         NavigationStack {
             ScrollView {
                 contentStack
+                orDividerWord
+                cameraButton
             }
             .scrollDismissesKeyboard(.interactively)
             .navigationTitle("Reading Moment")
@@ -99,6 +105,46 @@ struct MomentEntryView: View {
         }
     }
     
+    private var cameraButton: some View {
+        Button() {
+            if let error = CameraPermission.checkPermission() {
+                cameraError = error
+            } else {
+                showCamera.toggle()
+            }
+        } label: {
+            Image(systemName: "camera.aperture")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 300, height: 65)
+        }
+        .alert(
+            isPresented: .constant(cameraError != nil),
+            error: cameraError
+        ) { _ in
+            Button("OK") {
+                cameraError = nil
+            }
+        } message: { error in
+            Text(error.recoverSuggestion ?? "Try again later")
+        }
+        .sheet(isPresented: $showCamera) {
+            UIKitCamera(selectedImage: $cameraImage )
+                .ignoresSafeArea()
+        }
+        .onChange(of: cameraImage) {
+            guard let newCameraImage = cameraImage else { return }
+            Task {
+                if let jpegData = newCameraImage.jpegData(compressionQuality: 1.0) {
+                    imageData = jpegData
+                }
+            }
+        }
+        .buttonStyle(.glassProminent)
+        .controlSize(.regular)
+       
+    }
+    
     var contentStack: some View {
         VStack(alignment: .leading) {
             TextField(text: $title){
@@ -115,12 +161,14 @@ struct MomentEntryView: View {
             photoPicker
         }
         .padding()
-        
-        
     }
     
-    
-    
+    private var orDividerWord: some View {
+        Text("OR")
+            .font(.callout)
+            .fontWeight(.bold)
+            .foregroundStyle(.secondary)
+    }
 }
 
 #Preview {
