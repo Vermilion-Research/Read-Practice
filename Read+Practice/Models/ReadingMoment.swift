@@ -15,7 +15,7 @@ class ReadingMoment {
     var note: String
     var imageData: Data?
     var timeStamp: Date
-//    var cameraImage: UIImage?
+    var cameraImageData: Data?
     
     var readingBadges: [ReadingBadge]
     
@@ -24,13 +24,15 @@ class ReadingMoment {
         title: String,
         note: String,
         imageData: Data? = nil,
-        timeStamp: Date = .now
+        timeStamp: Date = .now,
+        cameraImageData: Data? = nil
     ) {
         self.title = title
         self.note = note
         self.imageData = imageData
         self.timeStamp = timeStamp
         self.readingBadges = []
+        self.cameraImageData = cameraImageData
         
     }
     
@@ -39,7 +41,6 @@ class ReadingMoment {
             UIImage(data: $0)
         }
     }
-    
 }
 
 // has sample data for Reading moment

@@ -20,12 +20,11 @@ struct UIKitCamera: UIViewControllerRepresentable {
         return imagePicker
         
     }
-
+    
     func updateUIViewController(
         _ uiViewController: UIImagePickerController,
         context: Context
     ) {
-        fatalError("unimplemented")
     }
     
     func makeCoordinator() -> Coordinator {
@@ -49,6 +48,6 @@ struct UIKitCamera: UIViewControllerRepresentable {
             parent.dismiss()
         }
     }
-
+    
     
 }
