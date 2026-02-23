@@ -21,23 +21,17 @@ struct StreakCalculatorTests {
     @Test("Streak Calculations", arguments: [
         Input(expectedStreak: 0, days: []),
 
-
-
         Input(expectedStreak: 1, days: [0]),
 
         Input(expectedStreak: 1, days: [-1]),
 
         Input(expectedStreak: 0, days: [-2]),
 
-
-
         Input(expectedStreak: 1, days: [0, 0]),
 
         Input(expectedStreak: 1, days: [-1, -1]),
 
         Input(expectedStreak: 0, days: [-2, -2]),
-
-
 
         Input(expectedStreak: 3, days: [-2, -1, 0]),
 
