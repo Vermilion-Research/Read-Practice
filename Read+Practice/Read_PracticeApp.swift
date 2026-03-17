@@ -21,5 +21,6 @@ struct Read_PracticeApp: App {
 //                .environment(dataContainer)
         }
         .modelContainer(dataContainer.modelContainer)
+//        .modelContainer(for: [OnboardingVersion.self])
     }
 }

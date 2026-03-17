@@ -41,20 +41,20 @@ struct OnboardingScreen: View {
                         .padding(.bottom)
                         .foregroundStyle(.white)
                     
-                    Button {
-                        // put the toggle next view here
-                    } label: {
-                        Text("Next")
-                            .textCase(.uppercase)
-                            .font(.headline)
-                            .fontWeight(.bold)
-                            .foregroundStyle(.coral)
-                            
-                    }
-                    .frame(maxWidth: .infinity, idealHeight: 65)
-                    .background(Color.white)
-                    .clipShape(Capsule())
-                    .padding()
+//                    Button {
+//                        // put the toggle next view here
+//                    } label: {
+//                        Text("Next")
+//                            .textCase(.uppercase)
+//                            .font(.headline)
+//                            .fontWeight(.bold)
+//                            .foregroundStyle(.coral)
+//                            
+//                    }
+//                    .frame(maxWidth: .infinity, idealHeight: 65)
+//                    .background(Color.white)
+//                    .clipShape(Capsule())
+//                    .padding()
                 }
                 
             }

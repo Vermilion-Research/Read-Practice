@@ -6,10 +6,25 @@
 //
 
 import Foundation
+import SwiftData
 
-struct OnboardingItem: Identifiable {
-    let id = UUID()
-    let systemImageName: String
-    let title: String
-    let subtitle: String
+
+@Model
+class OnboardingItem: Identifiable {
+    var id = UUID()
+    var systemImageName: String
+    var title: String
+    var subtitle: String
+    
+    init(
+        id: UUID = UUID(),
+        systemImageName: String,
+        title: String,
+        subtitle: String
+    ) {
+        self.id = id
+        self.systemImageName = systemImageName
+        self.title = title
+        self.subtitle = subtitle
+    }
 }
