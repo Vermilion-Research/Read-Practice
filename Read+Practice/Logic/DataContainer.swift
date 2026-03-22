@@ -22,7 +22,8 @@ class DataContainer {
     init(includeSampleMoments: Bool = false) {
         let schema = Schema([
             ReadingMoment.self,
-            ReadingBadge.self
+            ReadingBadge.self,
+            OnboardingVersion.self
         ])
         
         let modelConfiguration = ModelConfiguration(
