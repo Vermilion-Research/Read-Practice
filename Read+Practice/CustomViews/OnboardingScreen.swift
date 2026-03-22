@@ -16,11 +16,11 @@ struct OnboardingScreen: View {
                 .ignoresSafeArea()
             ScrollView {
                 
-                VStack() {
+                VStack {
                     Text(item.title)
                         .bold()
                         .font(.largeTitle)
-                        .padding(.bottom)
+                        .padding()
                         .foregroundStyle(.white)
                 }
                 .padding(.top, 150)
@@ -31,30 +31,17 @@ struct OnboardingScreen: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(maxWidth: 200, maxHeight: 200)
-                        .padding(.top, 32)
-                        .padding(.bottom, 32)
+                        .padding()
                         .foregroundStyle(.white)
                     
                     Text(item.subtitle)
-                        .font(.subheadline)
+                        .font(.callout)
                         .fontWeight(.bold)
-                        .padding(.bottom)
+                        .padding()
+                        .padding()
                         .foregroundStyle(.white)
                     
-//                    Button {
-//                        // put the toggle next view here
-//                    } label: {
-//                        Text("Next")
-//                            .textCase(.uppercase)
-//                            .font(.headline)
-//                            .fontWeight(.bold)
-//                            .foregroundStyle(.coral)
-//                            
-//                    }
-//                    .frame(maxWidth: .infinity, idealHeight: 65)
-//                    .background(Color.white)
-//                    .clipShape(Capsule())
-//                    .padding()
+                    
                 }
                 
             }
