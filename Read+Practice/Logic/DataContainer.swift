@@ -62,7 +62,7 @@ class DataContainer {
         }
     }
 }
-
+@MainActor
 private let sampleContainer = DataContainer(includeSampleMoments: true)
 
 extension View {

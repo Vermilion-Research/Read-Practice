@@ -8,7 +8,8 @@
 import Foundation
 import SwiftData
 
-class ReadingBadgeManager {
+@MainActor
+final class ReadingBadgeManager {
     private var modelContainer: ModelContainer
     
     init(modelContainer: ModelContainer) {

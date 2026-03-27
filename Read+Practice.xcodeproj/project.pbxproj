@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A2AA8672F74C395009F9D36 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2AA8662F74C395009F9D36 /* WidgetKit.framework */; };
+		4A2AA8692F74C395009F9D36 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2AA8682F74C395009F9D36 /* SwiftUI.framework */; };
+		4A2AA87A2F74C396009F9D36 /* StreakWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A2AA8642F74C395009F9D36 /* StreakWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4A705F362F102DF5005F1C5C /* Five stars unlocked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F2E2F102DF5005F1C5C /* Five stars unlocked.pdf */; };
 		4A705F372F102DF5005F1C5C /* Perfect ten unlocked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F302F102DF5005F1C5C /* Perfect ten unlocked.pdf */; };
 		4A705F382F102DF5005F1C5C /* Five stars locked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A705F2D2F102DF5005F1C5C /* Five stars locked.pdf */; };
@@ -22,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4A2AA8782F74C396009F9D36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A52ED412F0D73EA0078D36B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A2AA8632F74C395009F9D36;
+			remoteInfo = StreakWidgetExtension;
+		};
 		4A3E04852F15E30F00493F1C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4A52ED412F0D73EA0078D36B /* Project object */;
@@ -31,7 +41,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4A2AA87F2F74C396009F9D36 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4A2AA87A2F74C396009F9D36 /* StreakWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4A2AA8642F74C395009F9D36 /* StreakWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StreakWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2AA8662F74C395009F9D36 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4A2AA8682F74C395009F9D36 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		4A3E04812F15E30E00493F1C /* Read+PracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Read+PracticeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A52ED492F0D73EA0078D36B /* Read+Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Read+Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A705F282F102DF5005F1C5C /* Blank.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Blank.pdf; sourceTree = "<group>"; };
@@ -48,7 +75,58 @@
 		4A705F342F102DF5005F1C5C /* MomentsTab.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = MomentsTab.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4A2AA87B2F74C396009F9D36 /* Exceptions for "StreakWidget" folder in "StreakWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4A2AA8632F74C395009F9D36 /* StreakWidgetExtension */;
+		};
+		4A2AA8812F74EB0C009F9D36 /* Exceptions for "Read+Practice" folder in "StreakWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				Camera/CameraPermission.swift,
+				Camera/UIKitCamera.swift,
+				CustomViews/OnboardingScreen.swift,
+				CustomViews/OnboardingView.swift,
+				CustomViews/Seal.swift,
+				CustomViews/SealAccessoryView.swift,
+				CustomViews/SealLayout.swift,
+				Item.swift,
+				ListView.swift,
+				Logic/DataContainer.swift,
+				Logic/OnboardingVersion.swift,
+				Logic/StreakCalculator.swift,
+				Models/BadgeDetails.swift,
+				Models/OnboardingItem.swift,
+				Models/ReadingBadge.swift,
+				Models/ReadingBadgeManager.swift,
+				Models/ReadingMoment.swift,
+				Tabs/Achievements/AchievementsView.swift,
+				Tabs/Achievements/LockedBadgeView.swift,
+				Tabs/Achievements/ReadingBadgeDetailView.swift,
+				Tabs/Achievements/StreakView.swift,
+				Tabs/Achievements/UnlockedBadgeView.swift,
+				Tabs/Moments/MomentEntryView.swift,
+				Tabs/Moments/ReadingMomentDetailView.swift,
+				Tabs/Moments/ReadingMomentSealView.swift,
+				Tabs/Moments/ReadingMomentsView.swift,
+			);
+			target = 4A2AA8632F74C395009F9D36 /* StreakWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		4A2AA86A2F74C395009F9D36 /* StreakWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4A2AA87B2F74C396009F9D36 /* Exceptions for "StreakWidget" folder in "StreakWidgetExtension" target */,
+			);
+			path = StreakWidget;
+			sourceTree = "<group>";
+		};
 		4A3E04822F15E30F00493F1C /* Read+PracticeTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Read+PracticeTests";
@@ -56,12 +134,24 @@
 		};
 		4A52ED4B2F0D73EA0078D36B /* Read+Practice */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4A2AA8812F74EB0C009F9D36 /* Exceptions for "Read+Practice" folder in "StreakWidgetExtension" target */,
+			);
 			path = "Read+Practice";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4A2AA8612F74C395009F9D36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A2AA8692F74C395009F9D36 /* SwiftUI.framework in Frameworks */,
+				4A2AA8672F74C395009F9D36 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A3E047E2F15E30E00493F1C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,11 +169,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A2AA8652F74C395009F9D36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A2AA8662F74C395009F9D36 /* WidgetKit.framework */,
+				4A2AA8682F74C395009F9D36 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4A52ED402F0D73EA0078D36B = {
 			isa = PBXGroup;
 			children = (
 				4A52ED4B2F0D73EA0078D36B /* Read+Practice */,
 				4A3E04822F15E30F00493F1C /* Read+PracticeTests */,
+				4A2AA86A2F74C395009F9D36 /* StreakWidget */,
+				4A2AA8652F74C395009F9D36 /* Frameworks */,
 				4A52ED4A2F0D73EA0078D36B /* Products */,
 				4A705F352F102DF5005F1C5C /* Assets */,
 			);
@@ -94,6 +195,7 @@
 			children = (
 				4A52ED492F0D73EA0078D36B /* Read+Practice.app */,
 				4A3E04812F15E30E00493F1C /* Read+PracticeTests.xctest */,
+				4A2AA8642F74C395009F9D36 /* StreakWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +230,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4A2AA8632F74C395009F9D36 /* StreakWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A2AA87C2F74C396009F9D36 /* Build configuration list for PBXNativeTarget "StreakWidgetExtension" */;
+			buildPhases = (
+				4A2AA8602F74C395009F9D36 /* Sources */,
+				4A2AA8612F74C395009F9D36 /* Frameworks */,
+				4A2AA8622F74C395009F9D36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4A2AA86A2F74C395009F9D36 /* StreakWidget */,
+			);
+			name = StreakWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = StreakWidgetExtension;
+			productReference = 4A2AA8642F74C395009F9D36 /* StreakWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		4A3E04802F15E30E00493F1C /* Read+PracticeTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A3E04872F15E30F00493F1C /* Build configuration list for PBXNativeTarget "Read+PracticeTests" */;
@@ -158,10 +282,12 @@
 				4A52ED452F0D73EA0078D36B /* Sources */,
 				4A52ED462F0D73EA0078D36B /* Frameworks */,
 				4A52ED472F0D73EA0078D36B /* Resources */,
+				4A2AA87F2F74C396009F9D36 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4A2AA8792F74C396009F9D36 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				4A52ED4B2F0D73EA0078D36B /* Read+Practice */,
@@ -183,6 +309,9 @@
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
+					4A2AA8632F74C395009F9D36 = {
+						CreatedOnToolsVersion = 26.0;
+					};
 					4A3E04802F15E30E00493F1C = {
 						CreatedOnToolsVersion = 26.0;
 						TestTargetID = 4A52ED482F0D73EA0078D36B;
@@ -208,11 +337,19 @@
 			targets = (
 				4A52ED482F0D73EA0078D36B /* Read+Practice */,
 				4A3E04802F15E30E00493F1C /* Read+PracticeTests */,
+				4A2AA8632F74C395009F9D36 /* StreakWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4A2AA8622F74C395009F9D36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A3E047F2F15E30E00493F1C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,6 +379,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4A2AA8602F74C395009F9D36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A3E047D2F15E30E00493F1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +403,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4A2AA8792F74C396009F9D36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A2AA8632F74C395009F9D36 /* StreakWidgetExtension */;
+			targetProxy = 4A2AA8782F74C396009F9D36 /* PBXContainerItemProxy */;
+		};
 		4A3E04862F15E30F00493F1C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4A52ED482F0D73EA0078D36B /* Read+Practice */;
@@ -267,6 +416,68 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		4A2AA87D2F74C396009F9D36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CZ93KGP23;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StreakWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StreakWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kariorg.Read-Practice.StreakWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A2AA87E2F74C396009F9D36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CZ93KGP23;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StreakWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StreakWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kariorg.Read-Practice.StreakWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4A3E04882F15E30F00493F1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -503,6 +714,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4A2AA87C2F74C396009F9D36 /* Build configuration list for PBXNativeTarget "StreakWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A2AA87D2F74C396009F9D36 /* Debug */,
+				4A2AA87E2F74C396009F9D36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4A3E04872F15E30F00493F1C /* Build configuration list for PBXNativeTarget "Read+PracticeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
