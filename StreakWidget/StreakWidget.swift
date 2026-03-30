@@ -44,7 +44,7 @@ struct SimpleEntry: TimelineEntry {
 
 struct StreakWidgetEntryView : View {
 //    var entry: Provider.Entry
-    var streak: StreakView
+//    var streak: StreakView
 
     var body: some View {
         VStack {
@@ -63,11 +63,18 @@ struct StreakWidgetEntryView : View {
 
 struct StreakWidget: Widget {
     let kind: String = "StreakWidget"
+    @Query(sort: \ReadingMoment.timeStamp)
+    private var readingMoments: [ReadingMoment]
+    
 
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
-            StreakView(numberOfDays: 0)
-// get the actual streak and
+            StreakView(
+                numberOfDays: StreakCalculator()
+                    .calculateStreak(for: readingMoments)
+            )
+            .frame(maxWidth: .infinity)
+// get the actual strea
                 .containerBackground(.fill.tertiary, for: .widget)
         } 
     }
