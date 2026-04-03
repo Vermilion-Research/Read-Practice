@@ -19,7 +19,7 @@ struct StreakEntry: TimelineEntry {
 }
 
 struct StreakViewProvider: TimelineProvider {
-    
+
     @Query(sort: \ReadingMoment.timeStamp)
     private var readingMoments: [ReadingMoment]
     
@@ -29,7 +29,10 @@ struct StreakViewProvider: TimelineProvider {
             streak: StreakView(
                 numberOfDays: StreakCalculator().calculateStreak(for: readingMoments)
             )
+            
         )
+        
+        
     }
     
     func getSnapshot(
@@ -43,6 +46,7 @@ struct StreakViewProvider: TimelineProvider {
                     .calculateStreak(for: readingMoments)
             )
         )
+        completion(entry)
     }
     
     func getTimeline(
@@ -60,26 +64,59 @@ struct StreakViewProvider: TimelineProvider {
             entries: [entry],
             policy: .after(Date().addingTimeInterval(3600))
         )
+        completion(timeline)
+        
     }
 }
 
-
-struct StreakWidget: Widget {
-    let kind: String = "StreakWidget"
+struct StreakWidgetEntryView: View {
+    var entry: StreakViewProvider.Entry
+    
+    @Environment(\.modelContext) var modelContext
     @Query(sort: \ReadingMoment.timeStamp)
     private var readingMoments: [ReadingMoment]
     
-
-    var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: StreakViewProvider()) { entry in
+    @ViewBuilder var body: some View  {
+        let content = VStack {
             StreakView(
                 numberOfDays: StreakCalculator()
                     .calculateStreak(for: readingMoments)
             )
-            .frame(maxWidth: .infinity)
-            .containerBackground(.fill.tertiary, for: .widget)
-        } 
+            .modelContext(self.modelContext)
+            
+//                        .frame(maxWidth: .infinity)
+            //            .containerBackground(.fill.tertiary, for: .widget)
+        }
+        if #available(iOS 18.0, macOS 26.0, watchOS 26.4, *){
+            content.containerBackground(.fill.tertiary, for: .widget)
+        } else {
+            content.background(Color.clear)
+        }
     }
+}
+
+struct StreakWidget: Widget {
+    @Environment(\.modelContext) var modelContext
+    @Query(sort: \ReadingMoment.timeStamp)
+    private var readingMoments: [ReadingMoment]
+    let kind: String = "StreakWidget"
+    
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind, provider: StreakViewProvider()) { entry in
+            let base = StreakWidgetEntryView(entry: entry)
+                .modelContainer(for: ReadingMoment.self)
+
+            if #available(iOS 18.0, macOS 26.0, watchOS 26.4, *){
+                base.containerBackground(.fill.tertiary, for: .widget)
+            } else {
+                base.background(Color.clear)
+            }
+
+        }
+        .configurationDisplayName("Reading Moments Streak View (Readdy App)")
+        .description("See how well you're keeping up with your reading habit. ")
+    }
+        
 }
 
 

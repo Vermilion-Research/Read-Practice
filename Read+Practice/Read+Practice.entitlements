@@ -4,6 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
+		<string>group.Read-Practice.Read-PracticeWidget</string>
 		<string>group.kariorg.Read-Practice</string>
 	</array>
 </dict>

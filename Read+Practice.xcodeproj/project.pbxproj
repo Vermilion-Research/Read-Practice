@@ -73,6 +73,7 @@
 		4A705F312F102DF5005F1C5C /* Shutterbug locked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Shutterbug locked.pdf"; sourceTree = "<group>"; };
 		4A705F322F102DF5005F1C5C /* Shutterbug unlocked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Shutterbug unlocked.pdf"; sourceTree = "<group>"; };
 		4A705F342F102DF5005F1C5C /* MomentsTab.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = MomentsTab.svg; sourceTree = "<group>"; };
+		4AA41FB52F806C1000370CAD /* StreakWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StreakWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -181,6 +182,7 @@
 		4A52ED402F0D73EA0078D36B = {
 			isa = PBXGroup;
 			children = (
+				4AA41FB52F806C1000370CAD /* StreakWidgetExtension.entitlements */,
 				4A52ED4B2F0D73EA0078D36B /* Read+Practice */,
 				4A3E04822F15E30F00493F1C /* Read+PracticeTests */,
 				4A2AA86A2F74C395009F9D36 /* StreakWidget */,
@@ -421,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StreakWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8CZ93KGP23;
@@ -452,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StreakWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8CZ93KGP23;
@@ -648,6 +652,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Read+Practice/Read+Practice.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8CZ93KGP23;
@@ -682,6 +687,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Read+Practice/Read+Practice.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8CZ93KGP23;
