@@ -14,6 +14,7 @@ struct AchievementsView: View {
     
     @Query(filter: #Predicate<ReadingBadge> {$0.timeStamp == nil})
     private var lockedReadingBadges: [ReadingBadge]
+    
     @Query(sort: \ReadingMoment.timeStamp)
     private var readingMoments: [ReadingMoment]
     
@@ -52,7 +53,7 @@ struct AchievementsView: View {
                     LockedBadgeView(readingBadge: readingBadge)
                 }
             }
-            }
+        }
         .padding()
         .frame(maxWidth: .infinity)
         
