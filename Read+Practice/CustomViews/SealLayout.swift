@@ -15,7 +15,7 @@ enum SealLayout {
     var size: CGFloat {
         switch self {
         case .standard:
-            return 200.0
+            return 175.0
             
         case .large:
             return 350.0
