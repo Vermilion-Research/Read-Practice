@@ -17,8 +17,6 @@ struct Read_PracticeApp: App {
             ContentView()
                 .environment(dataContainer)
                 
-//            MomentEntryView()
-//                .environment(dataContainer)
         }
         .modelContainer(dataContainer.modelContainer)
 //        .modelContainer(for: [OnboardingVersion.self])

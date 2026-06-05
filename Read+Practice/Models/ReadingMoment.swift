@@ -9,6 +9,12 @@ import Foundation
 import SwiftData
 import UIKit
 
+/*
+TODO: extend class to conform to appentity, and potentially observable
+TODO: create addReadingMoment()??
+TODO: add id: UUID?
+ 
+ */
 @Model
 class ReadingMoment {
     var title: String
@@ -17,7 +23,17 @@ class ReadingMoment {
     var timeStamp: Date
     var cameraImageData: Data?
     
+    var id: UUID?
+    
     var readingBadges: [ReadingBadge]
+    
+    var readingMoments: [ReadingMoment] = []
+    
+    var image: UIImage? {
+        imageData.flatMap {
+            UIImage(data: $0)
+        }
+    }
     
     
     init(
@@ -25,7 +41,7 @@ class ReadingMoment {
         note: String,
         imageData: Data? = nil,
         timeStamp: Date = .now,
-        cameraImageData: Data? = nil
+        cameraImageData: Data? = nil,
     ) {
         self.title = title
         self.note = note
@@ -36,11 +52,6 @@ class ReadingMoment {
         
     }
     
-    var image: UIImage? {
-        imageData.flatMap {
-            UIImage(data: $0)
-        }
-    }
 }
 
 // has sample data for Reading moment
@@ -106,3 +117,14 @@ extension ReadingMoment {
 
 }
 
+extension ReadingMoment {
+    
+//    func addNewReadingMoment() {
+//        let newReadingMoment = ReadingMoment(title: title, note: note)
+//    }
+}
+
+@Observable
+class ReadingMomentViewModel {
+    
+}
