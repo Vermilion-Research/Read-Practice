@@ -20,29 +20,26 @@ struct CreateReadingMomentIntent: AppIntent {
     @Parameter(title: "Summary", requestValueDialog: "Give a 2 sentence summary")
     var newReadingMomentNote: String
     
-    init() {}
-    
-    init(_ newReadingMomentTitle: String, _ newReadingMomentNote: String) {
-        self.newReadingMomentTitle = newReadingMomentTitle
-        self.newReadingMomentNote = newReadingMomentNote
-    }
-//    var newReadingMoment: ReadingMomentEntity
-//    var note: String
-    
-    func perform() async throws -> some IntentResult {
-//        let addMoment = await addNewReadingMoment(title: title, note: note)
-//        await addNewReadingMoment()
-        return .result()
-    }
-    
-    @MainActor func addNewReadingMoment() {
-        let container = try! ModelContainer(for: ReadingMoment.self)
+    @Dependency(key: "ModelContainer")
+    private var modelContainer: ModelContainer
+
+    @MainActor
+    func perform() async throws -> some IntentResult & ReturnsValue<String> {
+        let context = ModelContext(modelContainer)
+        
         let newReadingMoment = ReadingMoment(
             title: newReadingMomentTitle,
-            note: newReadingMomentNote,
-            timeStamp: .now
+            note: newReadingMomentNote
         )
-        container.mainContext.insert(newReadingMoment)
+        context.insert(newReadingMoment)
         
+        try context.save()
+        
+        WidgetCenter.shared.reloadAllTimelines()
+        
+        return .result(value: "Added \(newReadingMomentTitle)!")
     }
+    
+    init() {}
+    
 }

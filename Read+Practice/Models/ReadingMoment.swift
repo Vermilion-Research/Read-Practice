@@ -9,12 +9,7 @@ import Foundation
 import SwiftData
 import UIKit
 
-/*
-TODO: extend class to conform to appentity, and potentially observable
-TODO: create addReadingMoment()??
-TODO: add id: UUID?
- 
- */
+
 @Model
 class ReadingMoment {
     var title: String
@@ -117,14 +112,5 @@ extension ReadingMoment {
 
 }
 
-extension ReadingMoment {
-    
-//    func addNewReadingMoment() {
-//        let newReadingMoment = ReadingMoment(title: title, note: note)
-//    }
-}
 
-@Observable
-class ReadingMomentViewModel {
-    
-}
+

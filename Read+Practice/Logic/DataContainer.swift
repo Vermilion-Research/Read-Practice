@@ -8,7 +8,6 @@
 import SwiftData
 import SwiftUI
 
-// create addreadindmomentfunc here
 
 @Observable
 @MainActor
@@ -74,3 +73,4 @@ extension View {
             .modelContainer(sampleContainer.modelContainer)
     }
 }
+
