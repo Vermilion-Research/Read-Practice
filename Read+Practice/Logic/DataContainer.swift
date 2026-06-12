@@ -8,6 +8,7 @@
 import SwiftData
 import SwiftUI
 
+
 @Observable
 @MainActor
 class DataContainer {
@@ -72,3 +73,4 @@ extension View {
             .modelContainer(sampleContainer.modelContainer)
     }
 }
+

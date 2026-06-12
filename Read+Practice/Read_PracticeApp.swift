@@ -7,20 +7,31 @@
 
 import SwiftUI
 import SwiftData
+import AppIntents
+
 
 @main
 struct Read_PracticeApp: App {
-    let dataContainer = DataContainer()
-
+    @MainActor
+    static let sharedDataContainer = DataContainer()
+    
+    init() {
+        
+        AppDependencyManager.shared
+            .add(
+                key: "ModelContainer",
+                dependency: Read_PracticeApp.sharedDataContainer
+                    .modelContainer)
+    }
+    
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(dataContainer)
-                
-//            MomentEntryView()
-//                .environment(dataContainer)
+                .environment(Read_PracticeApp.sharedDataContainer
+                )
         }
-        .modelContainer(dataContainer.modelContainer)
-//        .modelContainer(for: [OnboardingVersion.self])
+        .modelContainer(Read_PracticeApp.sharedDataContainer
+            .modelContainer)
     }
 }

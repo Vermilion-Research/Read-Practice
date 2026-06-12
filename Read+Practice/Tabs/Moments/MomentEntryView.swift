@@ -73,7 +73,7 @@ struct MomentEntryView: View {
                             fatalError()
                         }
                     }
-                    .disabled(title.isEmpty)
+                    .disabled(note.isEmpty)
                 }
             }
         }
@@ -148,13 +148,13 @@ struct MomentEntryView: View {
     var contentStack: some View {
         VStack(alignment: .leading) {
             TextField(text: $title){
-                Text("Title (Required)")
+                Text("Title")
             }
             .font(.title.bold())
             .padding(.top, 48)
             Divider()
             
-            TextField("Log your two sentence summary", text: $note, axis: .vertical)
+            TextField("Log your two sentence summary (Required)", text: $note, axis: .vertical)
                 .multilineTextAlignment(.leading)
                 .lineLimit(5...Int.max)
             
