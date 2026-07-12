@@ -17,7 +17,7 @@ enum BadgeDetails: Int, Codable, CaseIterable {
     case perfectTen
     
     
-    var requirements: String {
+    var requirements: LocalizedStringKey {
         switch self {
         case .firstEntry:
             return "Record first reading moment."
@@ -33,6 +33,7 @@ enum BadgeDetails: Int, Codable, CaseIterable {
         
     }
     
+    // changing to localizedStringKey causes an error
     var title: String {
         switch self {
         case .firstEntry:
@@ -78,7 +79,7 @@ enum BadgeDetails: Int, Codable, CaseIterable {
         }
     }
     
-    var congratulatoryMessage: String {
+    var congratulatoryMessage: LocalizedStringKey {
         switch self {
         case .firstEntry:
             return "Every single page read is significant on your journey to focus better! Congratulations "
