@@ -59,7 +59,7 @@ struct AchievementsView: View {
         
     }
     
-    func header(_ text: String) -> some View {
+    func header(_ text: LocalizedStringKey) -> some View {
         Text(text)
             .font(.subheadline.bold())
             .padding()
