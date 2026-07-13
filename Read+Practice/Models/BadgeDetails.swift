@@ -17,7 +17,7 @@ enum BadgeDetails: Int, Codable, CaseIterable {
     case perfectTen
     
     
-    var requirements: String {
+    var requirements: LocalizedStringKey {
         switch self {
         case .firstEntry:
             return "Record first reading moment."
@@ -36,15 +36,15 @@ enum BadgeDetails: Int, Codable, CaseIterable {
     var title: String {
         switch self {
         case .firstEntry:
-            return "Start Reading"
+            return String(localized: "Start Reading")
         case .fiveStars:
-            return "5 Stars"
+            return String(localized: "5 Stars")
         case .shutterBug:
-            return "Shutter Bug"
+            return String(localized: "Shutter Bug")
         case .expressive:
-            return "Expressive"
+            return String(localized: "Expressive")
         case .perfectTen:
-            return "Perfect 10"
+            return String(localized: "Perfect 10")
         }
     }
     
@@ -78,7 +78,7 @@ enum BadgeDetails: Int, Codable, CaseIterable {
         }
     }
     
-    var congratulatoryMessage: String {
+    var congratulatoryMessage: LocalizedStringKey {
         switch self {
         case .firstEntry:
             return "Every single page read is significant on your journey to focus better! Congratulations "

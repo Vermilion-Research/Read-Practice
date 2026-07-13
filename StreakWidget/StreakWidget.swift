@@ -9,9 +9,6 @@ import WidgetKit
 import SwiftUI
 import SwiftData
 
-////    func relevances() async -> WidgetRelevances<ConfigurationAppIntent> {
-////        // Generate a list containing the contexts this widget is relevant in.
-////    }
 
 struct StreakEntry: TimelineEntry {
     let date: Date

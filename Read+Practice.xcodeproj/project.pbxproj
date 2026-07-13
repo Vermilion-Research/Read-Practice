@@ -87,7 +87,6 @@
 		4A2AA8812F74EB0C009F9D36 /* Exceptions for "Read+Practice" folder in "StreakWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Assets.xcassets,
 				Camera/CameraPermission.swift,
 				Camera/UIKitCamera.swift,
 				CustomViews/OnboardingScreen.swift,
@@ -96,7 +95,6 @@
 				CustomViews/SealAccessoryView.swift,
 				CustomViews/SealLayout.swift,
 				Item.swift,
-				ListView.swift,
 				Logic/DataContainer.swift,
 				Logic/OnboardingVersion.swift,
 				Logic/StreakCalculator.swift,
@@ -105,6 +103,8 @@
 				Models/ReadingBadge.swift,
 				Models/ReadingBadgeManager.swift,
 				Models/ReadingMoment.swift,
+				Resources/Assets.xcassets,
+				Resources/Localizable.xcstrings,
 				Tabs/Achievements/AchievementsView.swift,
 				Tabs/Achievements/LockedBadgeView.swift,
 				Tabs/Achievements/ReadingBadgeDetailView.swift,
@@ -116,6 +116,13 @@
 				Tabs/Moments/ReadingMomentsView.swift,
 			);
 			target = 4A2AA8632F74C395009F9D36 /* StreakWidgetExtension */;
+		};
+		4AC040342FFD916F00298C16 /* Exceptions for "Read+Practice" folder in "Read+PracticeTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Localizable.xcstrings,
+			);
+			target = 4A3E04802F15E30E00493F1C /* Read+PracticeTests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -136,6 +143,7 @@
 		4A52ED4B2F0D73EA0078D36B /* Read+Practice */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				4AC040342FFD916F00298C16 /* Exceptions for "Read+Practice" folder in "Read+PracticeTests" target */,
 				4A2AA8812F74EB0C009F9D36 /* Exceptions for "Read+Practice" folder in "StreakWidgetExtension" target */,
 			);
 			path = "Read+Practice";
@@ -329,6 +337,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = 4A52ED402F0D73EA0078D36B;
 			minimizedProjectReferenceProxies = 1;
@@ -586,6 +595,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -643,6 +653,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
