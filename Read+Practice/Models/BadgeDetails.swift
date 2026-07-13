@@ -33,19 +33,18 @@ enum BadgeDetails: Int, Codable, CaseIterable {
         
     }
     
-    // changing to localizedStringKey causes an error
     var title: String {
         switch self {
         case .firstEntry:
-            return "Start Reading"
+            return String(localized: "Start Reading")
         case .fiveStars:
-            return "5 Stars"
+            return String(localized: "5 Stars")
         case .shutterBug:
-            return "Shutter Bug"
+            return String(localized: "Shutter Bug")
         case .expressive:
-            return "Expressive"
+            return String(localized: "Expressive")
         case .perfectTen:
-            return "Perfect 10"
+            return String(localized: "Perfect 10")
         }
     }
     

@@ -50,6 +50,22 @@
         }
       }
     },
+    "5 reading moments with photos! Which entry stands out the most? " : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡5 momentos de lectura con fotos! ¿Qué entrada destaca más?"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡5 momentos de lectura con fotos! ¿Qué entrada destaca más?"
+          }
+        }
+      }
+    },
     "5 Stars" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -312,6 +328,22 @@
     },
     "Every single page read is significant on your journey to focus better! Congratulations" : {
       "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Cada página que lees es importante en tu camino hacia una mejor concentración! ¡Felicidades!"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Cada página que lees es importante en tu camino hacia una mejor concentración! ¡Felicidades!"
+          }
+        }
+      }
+    },
+    "Every single page read is significant on your journey to focus better! Congratulations " : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -640,7 +672,20 @@
       }
     },
     "Record at least 10 reading moments, collecting all other badges along the way " : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registra al menos 10 momentos de lectura y consigue todas las demás insignias por el camino."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registra al menos 10 momentos de lectura y consigue todas las demás insignias por el camino."
+          }
+        }
+      }
     },
     "Record at least 10 reading moments, collecting all other badges along the way." : {
       "extractionState" : "manual",
