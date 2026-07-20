@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@" : {
+
+    },
     "^[%lld \nDays](inflect: true)" : {
       "localizations" : {
         "es" : {
@@ -624,6 +627,22 @@
     },
     "Read one page of a book or text then come back here" : {
       "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lee una página de un libro o texto y luego vuelve aquí."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lee una página de un libro o texto y luego vuelve aquí."
+          }
+        }
+      }
+    },
+    "Read one page of a book or text then come back here." : {
       "localizations" : {
         "es" : {
           "stringUnit" : {

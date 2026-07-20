@@ -17,7 +17,7 @@ struct OnboardingScreen: View {
             ScrollView {
                 
                 VStack {
-                    Text(item.title)
+                    Text(LocalizedStringKey(item.title))
                         .bold()
                         .font(.largeTitle)
                         .padding()
@@ -34,7 +34,7 @@ struct OnboardingScreen: View {
                         .padding()
                         .foregroundStyle(.white)
                     
-                    Text(item.subtitle)
+                    Text(LocalizedStringKey(item.subtitle))
                         .font(.callout)
                         .fontWeight(.bold)
                         .padding()
