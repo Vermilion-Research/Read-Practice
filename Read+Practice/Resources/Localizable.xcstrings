@@ -608,6 +608,9 @@
         }
       }
     },
+    "Privacy Policy" : {
+
+    },
     "Read + Practice" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -789,6 +792,9 @@
         }
       }
     },
+    "Settings" : {
+
+    },
     "Shutter Bug" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -854,6 +860,9 @@
           }
         }
       }
+    },
+    "Terms of Service" : {
+
     },
     "This reading moment will be deleted. Earned badges will stay." : {
       "localizations" : {

@@ -89,6 +89,7 @@
 			membershipExceptions = (
 				Camera/CameraPermission.swift,
 				Camera/UIKitCamera.swift,
+				CustomViews/CardLayoutView.swift,
 				CustomViews/OnboardingScreen.swift,
 				CustomViews/OnboardingView.swift,
 				CustomViews/Seal.swift,
