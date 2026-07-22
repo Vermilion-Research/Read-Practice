@@ -22,9 +22,9 @@ struct ContentView: View {
             Tab("Achievements", systemImage: "medal.fill") {
                 AchievementsView()
             }
-            Tab("Settings", systemImage: "globe") {
-                SettingsView()
-            }
+//            Tab("Settings", systemImage: "globe") {
+//                SettingsView()
+//            }
         }
         .padding()
         .fullScreenCover(
