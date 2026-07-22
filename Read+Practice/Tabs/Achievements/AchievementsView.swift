@@ -8,6 +8,8 @@
 import SwiftUI
 import SwiftData
 
+//TODO: Add settings toolbar gear icon on right 
+
 struct AchievementsView: View {
     @Query(filter: #Predicate<ReadingBadge> {$0.timeStamp != nil })
     private var unlockedReadingBadges: [ReadingBadge]
@@ -18,10 +20,24 @@ struct AchievementsView: View {
     @Query(sort: \ReadingMoment.timeStamp)
     private var readingMoments: [ReadingMoment]
     
+    @State private var showSettingsView: Bool = false
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 contentStack
+            }
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        showSettingsView = true
+                    } label: {
+                        Image(systemName: "gear")
+                    }
+                    .sheet(isPresented: $showSettingsView) {
+                        SettingsView()
+                    }
+                }
             }
             .navigationTitle("Achievements")
         }

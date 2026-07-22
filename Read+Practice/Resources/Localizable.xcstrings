@@ -362,6 +362,9 @@
         }
       }
     },
+    "Exit" : {
+
+    },
     "Expressive" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -608,6 +611,22 @@
         }
       }
     },
+    "Privacy Policy" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Política de Privacidad"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Política de Privacidad"
+          }
+        }
+      }
+    },
     "Read + Practice" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -789,6 +808,22 @@
         }
       }
     },
+    "Settings" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes"
+          }
+        }
+      }
+    },
     "Shutter Bug" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -851,6 +886,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Resumen"
+          }
+        }
+      }
+    },
+    "Terms of Service" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos del Servicio"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos del Servicio"
           }
         }
       }
