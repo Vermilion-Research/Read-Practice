@@ -10,6 +10,10 @@ import SwiftUI
 
 struct SettingsView: View {
     //TODO: ADD REAL URLS FOR PRIVACY POLICY AND TERMS OF SERVICE
+    @State private var showSettingsView: Bool = true
+    
+    @Environment(\.dismiss) private var dismiss
+    
     let url = URL(string: "https://www.example.com")!
     var body: some View {
         NavigationStack {
@@ -29,6 +33,13 @@ struct SettingsView: View {
                     Image(systemName: "rectangle.portrait.and.arrow.forward")
                 }
                 .padding()
+            }
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button ("Exit", systemImage: "xmark"){
+                        dismiss()
+                    }
+                }
             }
             .padding()
             .frame(width: 320)
